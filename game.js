@@ -4,6 +4,13 @@ var userClickedPattern=[];
 var started=false;
 var level=0;
 
+$(".restartButton").click(function(){
+    if(!started){
+    $('#level-title').text("Level "+level)
+    nextSequence();
+    started=true;
+    }
+})
 $(document).keydown(function(event){
     if(event.key==='r'||event.key=='R'){
         if(!started){
